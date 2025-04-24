@@ -67,15 +67,6 @@ A big thanks to all the sponsors who support Django development. If you'd like t
 - Heroku  
 - Microsoft  
 - Sentry
-
----
-
-## Contributing
-
-Thank you for considering contributing to Django LMS! Whether it's a bug fix, feature request, or documentation update, we welcome contributions.
-
-📄 See our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to the project.
-
 ---
 
 ## Security Vulnerabilities
