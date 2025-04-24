@@ -1,8 +1,8 @@
 <p align="center">
   <h1 align="center">Django LMS</h1>
-  <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="120" />
+  <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="240" />
 </p>
-
+![Django Logo](https://static.djangoproject.com/img/logos/django-logo-positive.svg)
 <p align="center">
   <b href="https://img.shields.io/badge/build-passing-brightgreen">Build Status</b> |
   <b href="https://img.shields.io/badge/downloads-10k-blue">Total Downloads</b> |
@@ -17,7 +17,7 @@
   <img src="https://img.shields.io/badge/license-MIT-lightgrey" />
 </p>
 
-![Django Logo](https://static.djangoproject.com/img/logos/django-logo-positive.svg)
+
 <!-- 
 | Build Status | Total Downloads | Latest Stable Version | License |
 |--------------|------------------|------------------------|---------|
