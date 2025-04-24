@@ -17,8 +17,8 @@
   <img src="https://img.shields.io/badge/license-MIT-lightgrey" />
 </p>
 
-<!-- ![Django Logo](https://static.djangoproject.com/img/logos/django-logo-positive.svg)
-
+![Django Logo](https://static.djangoproject.com/img/logos/django-logo-positive.svg)
+<!-- 
 | Build Status | Total Downloads | Latest Stable Version | License |
 |--------------|------------------|------------------------|---------|
 | ![Build](https://img.shields.io/badge/build-passing-brightgreen) | ![Downloads](https://img.shields.io/badge/downloads-10k-blue) | ![Version](https://img.shields.io/badge/version-1.0.0-blueviolet) | ![License](https://img.shields.io/badge/license-MIT-lightgrey) |
