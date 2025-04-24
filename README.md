@@ -1,5 +1,6 @@
 <p align="center">
-  <h1 align="center">Django LMS</h1>
+  <h1 style="text-align:center; font-size:4em; font-weight:bold; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color:#2c3e50; margin-top:50px;">LMS</h1>
+
   <div align ="center">
   <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="720" />
   </div>
