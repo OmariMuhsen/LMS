@@ -1,7 +1,7 @@
 <p align="center">
-<h1 style="font-size:10em; font-family:Arial, sans-serif;" align = "center" >LMS(Learning Management System) </h1>
-  <div align ="center">
-  <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="620" />
+  <h1 style="font-size:10em; font-family:Arial, sans-serif;" align = "center">LMS (Learning Management System)</h1>
+  <div align="center">
+    <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="620" />
   </div>
 </p>
 
@@ -18,14 +18,6 @@
   <img src="https://img.shields.io/badge/version-1.0.0-blueviolet" />
   <img src="https://img.shields.io/badge/license-MIT-lightgrey" />
 </p>
-
-
-<!-- 
-| Build Status | Total Downloads | Latest Stable Version | License |
-|--------------|------------------|------------------------|---------|
-| ![Build](https://img.shields.io/badge/build-passing-brightgreen) | ![Downloads](https://img.shields.io/badge/downloads-10k-blue) | ![Version](https://img.shields.io/badge/version-1.0.0-blueviolet) | ![License](https://img.shields.io/badge/license-MIT-lightgrey) |
-
---- -->
 
 ## About Django LMS
 
@@ -82,7 +74,7 @@ A big thanks to all the sponsors who support Django development. If you'd like t
 
 Thank you for considering contributing to Django LMS! Whether it's a bug fix, feature request, or documentation update, we welcome contributions.
 
-📄 See our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+📄 See our [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on how to contribute to the project.
 
 ---
 
