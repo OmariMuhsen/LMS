@@ -1,6 +1,8 @@
 <p align="center">
   <h1 align="center">Django LMS</h1>
-  <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="420" align ="center" />
+  <div align ="center">
+  <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="720" />
+  </div>
 </p>
 
 <p align="center">
