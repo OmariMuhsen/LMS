@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'core',
     'userauths',
     'api',
+    'rest_framework',
     
 ]
 
