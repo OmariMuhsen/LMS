@@ -78,12 +78,6 @@ Thank you for considering contributing to Django LMS! Whether it's a bug fix, fe
 
 ---
 
-## Code of Conduct
-
-We are committed to fostering a welcoming and respectful community. Please read our [Code of Conduct](CODE_OF_CONDUCT.md) before participating.
-
----
-
 ## Security Vulnerabilities
 
 If you discover a security issue within this project, please report it responsibly by emailing the maintainers or using GitHub’s private vulnerability disclosure.
