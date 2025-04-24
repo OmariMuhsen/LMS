@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
+from django.db.models.signals import post_save
+
 
 class User(AbstractUser):
     """
@@ -39,3 +41,14 @@ class Profile(models.Model):
         if not self.full_name:  # Simplified check for empty or None
             self.full_name = self.user.username
         super(Profile, self).save(*args, **kwargs)
+
+
+def create_user_profile(sender, instance, created, **kwargs):
+    if created:
+        Profile.objects.create(user=instance, full_name=instance.username)
+
+def save_user_profile(sender, instance, **kwargs):
+    instance.profile.save()
+
+post_save.connect(create_user_profile, sender=User)
+post_save.connect(save_user_profile, sender=User)
