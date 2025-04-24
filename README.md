@@ -1,12 +1,29 @@
-# Django LMS
+<p align="center">
+  <h1 align="center">Django LMS</h1>
+  <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="120" />
+</p>
 
-![Django Logo](https://static.djangoproject.com/img/logos/django-logo-positive.svg)
+<p align="center">
+  <b href="https://img.shields.io/badge/build-passing-brightgreen">Build Status</b> |
+  <b href="https://img.shields.io/badge/downloads-10k-blue">Total Downloads</b> |
+  <b href="https://img.shields.io/badge/version-1.0.0-blueviolet">Latest Stable Version</b> |
+  <b href="https://img.shields.io/badge/license-MIT-lightgrey">License</b>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/build-passing-brightgreen" />
+  <img src="https://img.shields.io/badge/downloads-10k-blue" />
+  <img src="https://img.shields.io/badge/version-1.0.0-blueviolet" />
+  <img src="https://img.shields.io/badge/license-MIT-lightgrey" />
+</p>
+
+<!-- ![Django Logo](https://static.djangoproject.com/img/logos/django-logo-positive.svg)
 
 | Build Status | Total Downloads | Latest Stable Version | License |
 |--------------|------------------|------------------------|---------|
 | ![Build](https://img.shields.io/badge/build-passing-brightgreen) | ![Downloads](https://img.shields.io/badge/downloads-10k-blue) | ![Version](https://img.shields.io/badge/version-1.0.0-blueviolet) | ![License](https://img.shields.io/badge/license-MIT-lightgrey) |
 
----
+--- -->
 
 ## About Django LMS
 
