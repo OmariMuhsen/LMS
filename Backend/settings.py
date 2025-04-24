@@ -29,12 +29,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'userauths.User'
 
 # Application definition
 
 INSTALLED_APPS = [
     'jazzmin',
     'django.contrib.admin',
+
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
