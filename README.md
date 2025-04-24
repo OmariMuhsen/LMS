@@ -1,7 +1,7 @@
 <p align="center">
-<h1 style="font-size:10em; font-family:Arial, sans-serif;" align = "center" >LMS</h1>
+<h1 style="font-size:10em; font-family:Arial, sans-serif;" align = "center" >LMS(Learning Management System) </h1>
   <div align ="center">
-  <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="720" />
+  <img src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" width="620" />
   </div>
 </p>
 
