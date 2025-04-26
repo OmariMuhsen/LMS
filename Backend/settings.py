@@ -1,11 +1,11 @@
 from pathlib import Path
-from environs import Env
-env = Env()
-env.read_env()
+
 import os
 
-# Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# from environs import Env
+
+# env = Env()
+# env.read_env()
 
 
 # Quick-start development settings - unsuitable for production
@@ -20,8 +20,22 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'userauths.User'
-MAILGUN_SECRET_KEY = env("MAILGUN_SECRET_KEY")
-# Application definition
+
+# # Allow empty or missing variables with defaults
+# MAILGUN_API_KEY = env.str("MAILGUN_API_KEY", default="")
+# MAILERSEND_API_TOKEN = env.str("MAILERSEND_API_TOKEN", default="")
+# MAILGUN_SENDER_DOMAIN = env.str("MAILGUN_SENDER_DOMAIN", default="")
+# Build paths inside the project like this: BASE_DIR / 'subdir'.
+BASE_DIR = Path(__file__).resolve().parent.parent
+
+
+# ANYMAIL = {
+#     "MAILGUN_API_KEY": env(MAILGUN_API_KEY),
+#     "MAILGUN_SENDER_DOMAIN": (MAILGUN_SENDER_DOMAIN),
+# }
+# FROM_EMAIL = env("FROM_EMAIL")
+# EMAIL_BACKEND = 'anymail.backends.mailgun.EmailBackend'
+# # Application definition
 
 INSTALLED_APPS = [
     'jazzmin',
@@ -32,10 +46,17 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #Custom App
     'core',
     'userauths',
     'api',
+
+    #Third Party Apps
     'rest_framework',
+    'rest_framework_simplejwt.token_blacklist',
+    'corsheaders',
+    'anymail',
     
 ]
 

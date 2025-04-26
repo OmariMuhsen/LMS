@@ -2,7 +2,7 @@ from django.shortcuts import render
 from api import serializer as api_serializer
 from userauths.models import User, Profile
 from rest_framework.response import Response
-
+from django.core.mail import EmailMultiAlternatives
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.views import APIView
 from rest_framework import generics, status
@@ -11,8 +11,8 @@ from .serializer import RegisterSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
 import random
 from rest_framework.response import Response
-
-
+from django.template.loader import render_to_string
+from django.conf import settings
 
 class MyTokenObtainPairView(TokenObtainPairView):
     serializer_class = api_serializer.MyTokenObtainPairSerializer
@@ -52,6 +52,28 @@ class PasswordResetEmailVerifyAPIView(APIView):
         # Generate a reset password link to send to the user (can be used on the frontend)
         link = f"http://localhost:5173/create-new-password/?otp={user.otp}&uuidb64={uuidb64}&refresh_token={refresh_token}"
         print("Reset link:", link)  # Debugging/logging the generated reset link
+
+        merge_data = {
+            "link":link,
+            "username":user.username
+        }
+
+        subject = "Password Rest Email"
+        text_body = render_to_string("email/password_reset.txt", context)
+        html_body = render_to_string("email/password_reset.html", context)
+
+        msg = EmailMultiAlternatives(
+            subject = subject,
+            from_email = settings.FROM_EMAIL,
+            to=[user.email],
+            body = text_body,
+        )
+        msg.attach_alternative(html_body, "text/html")
+        msg.send()
+        print("link =====", link)
+
+
+
 
         # Use the serializer to serialize the user data, so all fields can be returned in the response
         serializer = self.serializer_class(user)
