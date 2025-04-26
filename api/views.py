@@ -5,11 +5,14 @@ from rest_framework.response import Response
 
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework.views import APIView
-from rest_framework import generics
+from rest_framework import generics, status
 from rest_framework.permissions import AllowAny
 from .serializer import RegisterSerializer
 from rest_framework_simplejwt.tokens import RefreshToken
 import random
+from rest_framework.response import Response
+
+
 
 class MyTokenObtainPairView(TokenObtainPairView):
     serializer_class = api_serializer.MyTokenObtainPairSerializer
@@ -22,6 +25,7 @@ class RegisterView(generics.CreateAPIView):
 def generate_random_otp(length=7):
     return ''.join([str(random.randint(0, 9)) for _ in range(length)])
 
+##_________________________________________________________________________________________________________________________________________________________
 
 class PasswordResetEmailVerifyAPIView(APIView):
     permission_classes = [AllowAny]  # Allow access without authentication (public endpoint)
@@ -55,4 +59,37 @@ class PasswordResetEmailVerifyAPIView(APIView):
         # Return the serialized user data with a success message
         return Response(serializer.data, status=200)
 
+##____________________________________________________________________________________________________________________________________________________________
+class PasswordChangeAPIView(generics.CreateAPIView):
+    permission_classes = [AllowAny]
+    serializer_class = api_serializer.UserSerializer
 
+    def create(self, request, *args, **kwargs):
+        # Ensure keys exist before accessing them
+        otp = request.data.get('otp')
+        uuidb64 = request.data.get('uuidb64')
+        password = request.data.get('password')
+
+        # Check if all required data is present
+        if not all([otp, uuidb64, password]):
+            return Response({"error": "Missing required fields"}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            # Convert uuidb64 (which is likely an integer) to int if it's base64 encoded
+            user_id = int(uuidb64)  # Assuming uuidb64 is the user id (adjust based on your encoding logic)
+
+            # Attempt to get the user with the provided OTP and uuidb64 (user_id)
+            user = get_user_model().objects.get(id=user_id, otp=otp)
+
+            # If user exists, set the new password
+            user.set_password(password)
+            user.otp = ""  # Clear the OTP once password is reset
+            user.save()
+
+            return Response({"message": "Password Changed Successfully"}, status=status.HTTP_201_CREATED)
+
+        except get_user_model().DoesNotExist:
+            return Response({"message": "User Does Not Exist or OTP Invalid"}, status=status.HTTP_404_NOT_FOUND)
+
+        except Exception as e:
+            return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
