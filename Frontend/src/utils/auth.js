@@ -92,6 +92,7 @@ export const setUser = async () => {
     }
 };
 
+
 // Function to set authentication tokens and user info
 export const setAuthUser = (access_token, refresh_token) => {
     // Save the access token in cookies with a 1-day expiry
@@ -118,6 +119,7 @@ export const setAuthUser = (access_token, refresh_token) => {
     useAuthStore.getState().setLoading(false);
 };
 
+
 // Function to refresh access token using refresh token
 export const getRefreshedToken = async () => {
     // Get the refresh token from cookies
@@ -131,6 +133,7 @@ export const getRefreshedToken = async () => {
     // Return the new tokens (access and refresh)
     return response.data;
 };
+
 
 // Function to check if the access token has expired
 export const isAccessTokenExpired = (access_token) => {
